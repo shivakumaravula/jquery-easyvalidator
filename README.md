@@ -7,4 +7,4 @@ If you want to support the development of this plugin, you are welcome.
 
 The plugin is written and maintained by Shiva Kumar Avula, lead developer of TekIntelligence (Jaffna Software) on the jQuery UI team, PHP and maintainer of Axloid. This plugin is started very recently, and will be updated and improved over time.
 
-Contact : scriptshiva@gmail.co
+Contact : scriptshiva@gmail.com
