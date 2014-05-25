@@ -1,7 +1,62 @@
 <html>
   <head>
     <title>jQuery-easyvalidator</title>
+
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery.easyvalidator.js"></script>
+
+    <Script type="text/javascript">
+    	//$('.easy-validate').easyvalidator();
+    	$(function(){
+    		$(".easy-validate").easyvalidator({ callback: 'myFunc' });
+    	});
+
+    	function submitForm(e) {
+    		e.preventDefault();
+    		/*if(! $(".easy-validate").easyvalidator({ callback: 'myFunc' })){
+    			alert('Validation passed');
+    		}
+    		else {
+    			alert('Validation failed');
+    		}*/
+    	}
+    </script>
   </head>
   <body>
-    <h1>jQuery Easy Validator - a jQuery plugin</h1>
+  	<section class="container">
+	    <h1 id="heading">jQuery Easy Validator - a jQuery plugin</h1>
+	    
+	    <form class="form-horizontal easy-validate" method="get" onSubmit="submitForm(event)">
+			<fieldset>	
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="name">User Name</label>
+			  <div class="controls">
+			    <input id="name" name="name" type="text" placeholder="" class="input-xlarge" data-validate="required|minLength:10">
+			    
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="email">EMail ID</label>
+			  <div class="controls">
+			    <input id="email" name="email" type="text" placeholder="" class="input-xlarge" data-validate="required|emailID">
+			    
+			  </div>
+			</div>
+
+			<!-- Button (Double) -->
+			<div class="control-group">
+			  <label class="control-label" for="submit"></label>
+			  <div class="controls">
+			    <button id="submit" name="submit" class="btn btn-success" type="submit">Submit</Submit>
+			  </div>
+			</div>
+
+			</fieldset>
+		</form>
+	</section>	
   </body>
